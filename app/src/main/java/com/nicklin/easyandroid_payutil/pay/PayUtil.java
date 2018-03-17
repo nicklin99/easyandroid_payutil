@@ -4,9 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.widget.Toast;
 
-import com.zfmeng.wxcart.pay.alipay.Alipay;
-import com.zfmeng.wxcart.pay.wxpay.Wxpay;
-import com.zfmeng.wxcart.utils.LogUtil;
+import com.nicklin.easyandroid_payutil.pay.alipay.Alipay;
+import com.nicklin.easyandroid_payutil.pay.wxpay.Wxpay;
+import com.nicklin.easyandroid_payutil.utils.LogUtil;
 
 
 /**
