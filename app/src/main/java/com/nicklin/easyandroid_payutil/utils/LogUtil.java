@@ -9,8 +9,6 @@ import android.util.Log;
 public class LogUtil {
 
     public static void d(String msg){
-        if(AppConfig.DEBUG_LOG){
-            Log.d("LogUtil", msg);
-        }
+        Log.d("LogUtil", msg);
     }
 }
