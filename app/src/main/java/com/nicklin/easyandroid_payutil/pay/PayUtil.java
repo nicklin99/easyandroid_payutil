@@ -53,10 +53,16 @@ public class PayUtil {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    PayResult payResult = getInstance(type).pay(activity,payCode);
+                    final PayResult payResult = getInstance(type).pay(activity,payCode);
 
+                    //onSuccess 一般会有 UI 操作，改为 UI 线程
                     if(payResult.isState()){
-                        payCallback.onSuccess(payResult);
+                        activity.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                payCallback.onSuccess(payResult);
+                            }
+                        });
                     }
 
                     payCallback.onFinish(payResult);
